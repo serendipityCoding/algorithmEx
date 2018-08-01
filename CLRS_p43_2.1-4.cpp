@@ -19,7 +19,10 @@ int main(){
 	int d=0;
 	for(int i=0;i<length;i++){
 		if(A[i]+B[i]+d>=2){
-			C[i]=A[i]+B[i]+d-2;
+			//origin answer C[i]=A[i]+B[i]+d-2;
+			//mod2 should be better
+			//then no need to check whether A[i]+B[i]+d>=2
+			C[i]=(A[i]+B[i]+d)%2;
 			d=1;
 		}
 		else{
